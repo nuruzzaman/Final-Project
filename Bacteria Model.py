@@ -24,7 +24,7 @@ class bacteria:
     print "Name=",self.name,", age in hours=",self.age,"multiplication count=",self.number_of_offspring
 
 initial_number_of_bacteria=100
-growth_rate=0.0001
+growth_rate=0.0002
 death_rate=0.0001
 
 # create an initial population. 
