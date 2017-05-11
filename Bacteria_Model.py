@@ -24,8 +24,8 @@ class bacteria:
     print "Name=",self.name,", age in hours=",self.age,"multiplication count=",self.number_of_offspring
 
 initial_number_of_bacteria=100
-growth_rate=0.0002
-death_rate=0.0001
+growth_rate=0.002
+death_rate=0.001
 
 # create an initial population. 
 
@@ -75,19 +75,15 @@ for hour in range(240):
     new_bacteria=bacteria("Bacteria",new_bacteria_age,new_bacteria_number_of_clones)
     population.append(this_bacteria)    
   
-population[0].displayBacteria()
-print population[0].age
-
-
-P=population[0].displayBacteria()
-T= population[0].age
 
 #plotting
-
 from matplotlib import pyplot as plt
+
 fig=plt.figure(1)
-plt.plot(bacteria.bacteria_count, population[0].age, 'bo', linewidth=4)
-plt.title('End Number of Bacteria')
-plt.ylabel('Hours')
-plt.xlabel('Bacteria')
+#plt.bar(2, bacteria.bacteria_count, alpha=0.5)
+plt.bar(2, bacteria.bacteria_count, alpha=0.5)
+plt.bar(1, 100, alpha=0.5)
+plt.title('Initial vs Final(w/o deaths)')
+plt.ylabel('Bacteria')
 plt.show()
+print bacteria.bacteria_count
